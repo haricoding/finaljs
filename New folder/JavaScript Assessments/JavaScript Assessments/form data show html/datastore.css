@@ -1,0 +1,82 @@
+table,td,th,tr{
+      border: 2px solid rgba(0,0,0,0.5);
+      border-collapse: collapse;
+}
+
+.center{
+      margin-left: auto;
+      margin-right: auto;
+}
+
+.close1{
+      display: block;
+      align-items: center;
+      justify-content: center;
+      text-align: center
+}
+.close2{
+      display: block;
+      align-items: center;
+      justify-content: center;
+      text-align: center
+}
+.close2{
+      visibility: visible;
+      margin-top: -55%;
+}
+.close1 {
+      visibility: hidden;
+      margin-top: -8%;
+}
+.close-btn{
+      display: block;
+      float: right;
+      cursor: pointer;
+}
+.popin{
+      max-width: 40%;
+      margin-left: 30%;
+      visibility: visible;
+      margin-top: 1%;
+}
+
+.popout{
+      max-width: 40%;
+      margin-left: 30%;
+      visibility: hidden;
+
+}
+.container{
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+      width: 200px;
+      max-width: 60%;
+      min-height: 100vh;
+  }
+.header{
+      text-align: center;
+      color: black;
+}
+.form1{
+      display: block;
+}
+  
+.form1 small{
+      visibility: hidden;
+}
+.form1.error small{
+      visibility: visible;
+      color: red;
+}
+.form1.sucess small{
+      visibility: hidden;
+}
+#eye{
+      position: relative;
+      float: right;
+      top: -27px;
+      left: -30px;
+      cursor: pointer;
+    
+}

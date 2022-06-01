@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var weight = 40
+        // var height = 160
+        // height = height/100         //to convert cm to  meters
+        // bmi = weight/(height*height)
+        // console.log(bmi)
+        // if (bmi < 0 || bmi > 500 || typeof(bmi)!=='number' || isNaN(bmi) === true)
+        // {
+        //     console.log('invalid');
+        // }
+        // else if(bmi < 18.5){
+        //     console.log('under weight');
+        // }
+        // else if(bmi >= 18.5 && bmi <= 24.9){
+        //     console.log('Normal weight');
+        // }
+        // else if(bmi >= 25 && bmi <=29.9 ){
+        //     console.log('over weight');
+        // }
+        // else if(bmi >=30){
+        //     console.log('obesity')
+        // }
+
+
+        // Using Turnary
+        var weight = 40;
+        var height = 160;
+        height = height/100 ;        //to convert cm to  meters
+        bmi = weight/(height*height);
+        console.log(bmi);
+
+        (bmi < 18.5) ? console.log ('under weight') :
+        (bmi >= 18.5 && bmi <= 24.9) ? console.log('Normal weight' ):
+        (bmi >= 25 && bmi <=29.9 ) ? console.log('over weight') :
+        (bmi >=30) ? console.log ('obesity'): ('invalid')
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

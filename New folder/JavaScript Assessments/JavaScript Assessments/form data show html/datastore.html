@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>add data</title>
+      <link rel="stylesheet" href="./datastore.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+            integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+      <div class="popout" id="tab">
+            <div class="container">
+                  <div class="close-btn" onclick="hideForm()">&times;</div>
+                  <div class="header">
+                        <h4>Please Fill the Form</h4>
+                  </div>
+                  <form class="form" id="form">
+
+
+                        <div class="form1">
+                              <label for="name">Name</label>
+                              <input type="text" class="form-control" placeholder="mark" id="name">
+                              <small>Error Message</small>
+                        </div>
+                        <div class="form1">
+                              <label for="age">Age</label>
+                              <input type="number" class="form-control" placeholder="18" id="age">
+                              <small>Error Message</small>
+                        </div>
+                        <div class="form1">
+                              <label for="subject">Subjects Studied</label> <br>
+                              <input type="checkbox" class="subject" id="subject1">&nbsp; Java
+                              <input type="checkbox" class="subject" id="subject2">&nbsp;HTML
+                              <input type="checkbox" class="subject" id="subject3">&nbsp;CSS
+                              <input type="checkbox" class="subject" id="subject4">&nbsp;JavaScript
+                              <span> <br><small>Error Message</small></span>
+                        </div>
+                        <div class="form1">
+                              <label for="gender">Gender</label> <br>
+                              <input type="radio" class="sex" name="sex" id="sex1">&nbsp;Male
+                              <input type="radio" class="sex" name="sex" id="sex2">&nbsp;Female
+                              <span> <br><small>Error Message</small></span>
+
+                        </div>
+                        <div class="form1">
+                              <label for="password">Password</label>
+                              <input type="password" class="form-control" placeholder="password" id="password">
+                              <span>
+                                    <i class="fa fa-eye" id="eye" onclick="showPass()"></i>
+                              </span>
+                              <small>Error Message</small>
+                        </div>
+                        <div class="form1">
+                              <label for="email">Email</label>
+                              <input type="email" class="form-control" placeholder="example@yahoo.com" id="email">
+                              <small>Error Message</small>
+                        </div>
+                        <div class="form1">
+                              <label for="state">State</label> <br>
+                              <select class="form-control" name="state" id="state">
+                                    <option value="--select state--">--select state--</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Tamilnadu">Tamilnadu</option>
+                                    <option value="Andra">Andra</option>
+                              </select>
+                              <small>Error Message</small>
+
+                        </div>
+                        <div class="form1">
+                              <input type="checkbox" id="checkbox">
+                              <label for="email">Agree to Terms and Conditions</label>
+                              <span> <br><small>Error Message</small></span>
+                        </div>
+                        <div class="col-auto my-1 form1">
+                              <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                  </form>
+
+            </div>
+      </div>
+      <div class="close2" id="close">
+            <h4>This is the data of the Employees</h4>
+            <button class="hide" onclick="showForm()" type="popin"> Add Data <br></button>
+            <div><br></div>
+            <table class="center" id="table">
+                  <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Subjects</th>
+                        <th>Gender</th>
+                        <th>Password</th>
+                        <th>Email</th>
+                        <th>State</th>
+                  </tr>
+
+
+            </table>
+      </div>
+      <script src="./datastore.js"></script>
+</body>
+
+</html>

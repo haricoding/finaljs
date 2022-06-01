@@ -1,0 +1,15 @@
+.main{
+      position: relative;
+      align-items: center;
+      left: 20px;
+}
+.widthchange{
+      max-width: 35%;
+}
+.space{
+     position: relative;
+     left:7px;
+
+}
+
+

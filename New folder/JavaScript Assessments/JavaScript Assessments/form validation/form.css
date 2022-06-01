@@ -1,0 +1,39 @@
+body{
+      background-color: lightseagreen;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+
+}
+.container{
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      width: 400px;
+      max-width: 100%;
+  }
+h4{
+      text-align: center;
+      color: black;
+}
+.form1{
+      display: block;
+}
+  
+.form1 small{
+      visibility: hidden;
+}
+.form1.error small{
+      visibility: visible;
+      color: red;
+}
+.form1.sucess small{
+      visibility: hidden;
+}
+
+
+
+
+
+

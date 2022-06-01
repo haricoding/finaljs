@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./validation2.css">
+    <style>.validate{color:red}</style>
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <div class="py-5" text-center>
+            <form novalidate>
+                <div class="row g-39">
+                    <div class="col-sm-4">
+                        <label for="firstName" class="form-label">firstName</label>
+                        <input type="text" id="firstname" class="form-control" placeholder="Mark" required>
+                        <span class="validate" id="firstname_validate"></span>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="LastName" class="form-label ">LastName</label>
+                        <input type="text" id="lastname" class="form-control " placeholder="Otto" required>
+                        <span class="validate" id="lastname_validate"></span>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="email" class="form-label">Email</label>
+                            <input id="email" type="text" class="form-control " placeholder="johnotto" required>
+                            <span class="validate" id="email_validate"></span>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label class="form-label"  for="city">city</label>
+                        <select name="" id="city" class="form-control">
+                            <option value="">choose...</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Mangalore">Mangalore</option>
+                            <option value="Tumkur">Tumkur</option>
+                            <option value="Davangere">Davangere</option>
+                        </select>
+                        <span class="validate" id="cityname_validate"></span>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="form-label" for="State">State</label>
+
+                        <select name="" id="state" class="form-control">
+                            <option value="">choose...</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Andhra pradesh">Andhra pradesh</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Tamilnadu">Tamilnadu</option> 
+                        </select>
+                        <span class="validate" id="statename_validate"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="zipcode" class="form-label">zipcode</label>
+                        <input id="zipcode" type="number" class="form-control" placeholder="zipcode" required>
+                        <span class="validate" id="zipcode_validate"></span>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-check">
+                            <input id="myCheck" type="checkbox" class="form-check-input mb-4">
+                            <label class="
+                    form-check-label" for="agree">Agree to terms and conditions</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button class="btn btn-primary btn-block" id="submit">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div id="tabledata"></div>
+    </div>
+
+</body>
+<script>
+    var details = [];
+    
+    document.getElementById("submit").addEventListener("click", function (event) {
+        event.preventDefault();
+        const employee = {
+            firstname: '',
+            lastname: '',
+            email: '',
+            city: '',
+            state: '',
+            zipcode: ''
+        }
+        const firstname_val = document.getElementById('firstname').value;
+        const lastname_val = document.getElementById('lastname').value;
+        const email_val = document.getElementById('email').value;
+        const city_val = document.getElementById('city').value;
+        const state_val = document.getElementById('state').value;
+        const zipcode_val = document.getElementById('zipcode').value;
+
+        const firstname_validate = document.getElementById('firstname_validate');
+        const lastname_validate = document.getElementById('lastname_validate');
+        const email_validate = document.getElementById('email_validate');
+        const cityname_validate = document.getElementById('cityname_validate');
+        const statename_validate = document.getElementById('statename_validate');
+        const zipcode_validate = document.getElementById('zipcode_validate');
+        const checkBox = document.getElementById("myCheck");
+        console.log('hghghghgh', firstname_val, lastname_val, zipcode_val , city_val);
+
+        employee.firstname = firstname_val;
+        employee.lastname = lastname_val;
+        employee.email = email_val;
+        employee.city = city_val;
+        employee.state = state_val;
+        employee.zipcode = zipcode_val;
+
+        if(firstname_val.length <= 0 ){
+            firstname_validate.innerHTML = '*First Name cannot be empty';
+        }
+        if(lastname_val.length <= 0){
+            lastname_validate.innerHTML = '*Last Name cannot be empty';
+        }
+       
+        if(email_val.length <= 0){
+            email_validate.innerHTML = '*Email Name cannot be empty';
+        }
+        if(city_val.length <= 0){
+            cityname_validate.innerHTML = '*City Name cannot be empty';
+        }
+        if(state_val.length <= 0){
+            statename_validate.innerHTML = '*State Name cannot be empty';
+        }
+        if(zipcode_val.length <= 0){
+            zipcode_validate.innerHTML = '*zipcode cannot be empty';
+        }
+        if(checkBox.checked == false){
+                alert('Please Check the checkbox');
+        }
+        else{
+            firstname_validate.innerHTML="";
+            lastname_validate.innerHTML="";
+            email_validate.innerHTML="";
+            cityname_validate.innerHTML="";
+            statename_validate.innerHTML="";
+            zipcode_validate.innerHTML="";
+            details.push(employee);
+            localStorage.setItem("array", JSON.stringify(details));
+            table();
+        }
+
+    });   
+    function table(){
+        const localdata = JSON.parse(localStorage.getItem('array'));
+        console.log('localdata',localdata);
+        const tableappend = document.getElementById('tabledata');
+        
+                    let empTable = `<table class="table border">
+                            <thead>
+                                <tr>
+                                <th>firstname</th>
+                                <th>lastname</th>
+                                <th>email</th>
+                                <th>city</th>
+                                <th>state</th>
+                                <th>zipcode</th>
+                                </tr>
+                            </thead>`
+                                localdata.forEach(emp => {
+                                    empTable += `<tr><td>${emp.firstname}</td>
+                                                        <td>${emp.lastname}</td>
+                                                        <td>${emp.email}</td>
+                                                        <td>${emp.city}</td>
+                                                        <td>${emp.state}</td>
+                                                        <td>${emp.zipcode}</td>
+                                                        </tr>`
+                                })
+                    empTable += `</table>`
+        tableappend.innerHTML = empTable;
+    }
+    table();
+</script>
+
+</html>

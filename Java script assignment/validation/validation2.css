@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --myfont: 'Mulish', sans-serif;
+    --my-btn-font: 'Montserrat', sans-serif;
+    --lg-lightcolor: liner-gradient(to left, rgba(116, 235, 213, 0.6), rgba(159, 172, 230, 0)) --lg--color: liner-gradient(to left, #74ebd5, #9face6)
+}
+
+body {
+    background-image: var(--lg-lightcolor), url('https://cdn.pixabay.com/photo/2021/12/21/14/47/castle-6885449_960_720.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: var(--myfont);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    background: var(--lg-color);
+    padding: 30px;
+}
+
+.header h2 {
+    color: #222;
+    font-family: var(--my-btn-font);
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.form {
+    
+}
+.form {
+    padding: 40px;
+}
+
+.form-control input {
+    width: 100px;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    display: block;
+    padding: 12px;
+}
+
+.form-control i {
+    position: absolute;
+    right: 12px;
+    top: 38px;
+    visibility: hidden;
+}
+
+.form-control small {
+    visibility: hidden;
+}
+
+.form .btn {
+    background: var(--lg-color);
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    color: #fff;
+    display: block;
+    font-family: var(--my-btn-font);
+    font-size: 16px;
+    padding: 15px 0;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 1s ease;
+}
